@@ -19,6 +19,7 @@
  */
 
 import Foundation
+import CoreFoundation
 
 public enum WordError: Error {
     case invalidWord
