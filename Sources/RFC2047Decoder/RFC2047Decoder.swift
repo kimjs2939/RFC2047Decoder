@@ -109,7 +109,7 @@ public class RFC2047Decoder {
     
     fileprivate static func charsetToSwiftEncoding(charset:String) -> String.Encoding {
         
-        let cfe = CFStringConvertIANACharSetNameToEncoding(charset as CFString)
+        let cfe = CFStringConvertIANACharSetNameToEncoding(charset as! CFString)
         if cfe != kCFStringEncodingInvalidId {
             let se = CFStringConvertEncodingToNSStringEncoding(cfe)
             let sse = String.Encoding(rawValue: se)
